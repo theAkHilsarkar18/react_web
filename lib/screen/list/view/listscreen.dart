@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 
-import '../../about/view/aboutscreen.dart';
 import '../../base/view/basescreen.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+
+class ListScreen extends StatefulWidget {
+  const ListScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<ListScreen> createState() => _ListScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _ListScreenState extends State<ListScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -23,18 +23,18 @@ class _HomeScreenState extends State<HomeScreen> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
-                width: 45.w,
+                  width: 42.w,
                   child: SingleChildScrollView(
                     physics: BouncingScrollPhysics(),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SizedBox(height: 2.h,),
-                        Text("Home",style: GoogleFonts.aBeeZee(color: Colors.black87,fontSize: 6.sp)),
-                        SizedBox(height: 2.h,),
-                        Text("$text$text$text",textAlign: TextAlign.justify),
+                        Text("ArticleList",style: GoogleFonts.aBeeZee(color: Colors.black87,fontSize: 6.sp)),
                         SizedBox(height: 2.h,),
                         Text("$text$text",textAlign: TextAlign.justify),
+                        SizedBox(height: 2.h,),
+                        Text("$text$text$text",textAlign: TextAlign.justify),
                         SizedBox(height: 2.h,),
                         Text("$text$text",textAlign: TextAlign.justify),
 
@@ -48,3 +48,4 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
