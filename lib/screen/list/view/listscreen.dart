@@ -23,7 +23,7 @@ class _ListScreenState extends State<ListScreen> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
-                  width: 42.w,
+                  width: 45.w,
                   child: SingleChildScrollView(
                     physics: BouncingScrollPhysics(),
                     child: Column(
@@ -32,11 +32,32 @@ class _ListScreenState extends State<ListScreen> {
                         SizedBox(height: 2.h,),
                         Text("ArticleList",style: GoogleFonts.aBeeZee(color: Colors.black87,fontSize: 6.sp)),
                         SizedBox(height: 2.h,),
-                        Text("$text$text",textAlign: TextAlign.justify),
-                        SizedBox(height: 2.h,),
-                        Text("$text$text$text",textAlign: TextAlign.justify),
-                        SizedBox(height: 2.h,),
-                        Text("$text$text",textAlign: TextAlign.justify),
+                        Row(
+                          children: [
+                            Container(
+                                height: 22.h,
+                                width: 19.w,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                  color: Colors.green,
+                                ),
+                                child: ClipRRect(borderRadius: BorderRadius.circular(10),child: Image.network('https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/285555989/original/f3fc204a7309530ba8e42880e71ef9c4fefa1232/write-an-article-for-you.jpg',fit: BoxFit.cover,))),
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text("Lorem Ipsum shub sdh",style: TextStyle(overflow: TextOverflow.ellipsis,fontSize: 4.sp)),
+                                ),
+                                Container(
+                                  height: 21.h,
+                                  width: 20.w,
+                                    padding: EdgeInsets.only(left: 2.sp,right: 2.sp),
+                                    child: Text('$text')),
+                              ],
+                            ),
+                          ],
+                        ),
 
                       ],
                     ),

@@ -19,7 +19,7 @@ class _BaseScreenState extends State<BaseScreen> {
     return SafeArea(
       child: Scaffold(
         appBar:  AppBar(
-          backgroundColor: Colors.teal,
+          backgroundColor: Colors.green,
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -28,7 +28,7 @@ class _BaseScreenState extends State<BaseScreen> {
                 child: InkWell(
                     onTap: () {
                   baseController.index.value = 0;
-                },child: Text('Home',style: GoogleFonts.aBeeZee(fontWeight: FontWeight.w500,fontSize: 3.sp))),
+                },child: Text('Home',style: GoogleFonts.aBeeZee(fontWeight: FontWeight.w500,fontSize: 3.5.sp))),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 15,right: 15),
@@ -36,27 +36,27 @@ class _BaseScreenState extends State<BaseScreen> {
                   onTap: () {
                     baseController.index.value = 1;
                   },
-                    child: Text('About',style: GoogleFonts.aBeeZee(fontWeight: FontWeight.w500,fontSize: 3.sp))),
+                    child: Text('About',style: GoogleFonts.aBeeZee(fontWeight: FontWeight.w500,fontSize: 3.5.sp))),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 15,right: 15),
                 child: InkWell(
                   onTap: () {
                     baseController.index.value = 2;
-                  },child: Text('Article',style: GoogleFonts.aBeeZee(fontWeight: FontWeight.w500,fontSize: 3.sp))),
+                  },child: Text('Article',style: GoogleFonts.aBeeZee(fontWeight: FontWeight.w500,fontSize: 3.5.sp))),
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 15,right: 15),
                 child: InkWell(onTap: () {
                   baseController.index.value = 3;
-                },child: Text('ArticleList',style: GoogleFonts.aBeeZee(fontWeight: FontWeight.w500,fontSize: 3.sp))),
+                },child: Text('ArticleList',style: GoogleFonts.aBeeZee(fontWeight: FontWeight.w500,fontSize: 3.5.sp))),
               ),
             ],
           ),
         ),
         body: Obx(
           () => Container(
-            child: baseController.screenList[baseController.index.value],
+            child: baseController.screenList[3],
           ),
         )
       ),

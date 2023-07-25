@@ -22,7 +22,7 @@ class _AboutScreenState extends State<AboutScreen> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
-                  width: 42.w,
+                  width: 45.w,
                   child: SingleChildScrollView(
                     physics: BouncingScrollPhysics(),
                     child: Column(
